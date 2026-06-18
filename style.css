@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(32, 32, 32);
+}
+h1{
+    color:darkred;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+}
+
+p{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Papyrus", fantasy;
+    margin: 5%;
+    letter-spacing: 2px;
+}
