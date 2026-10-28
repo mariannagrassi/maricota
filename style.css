@@ -1,20 +1,17 @@
 
-/* =========================================
+/* =====================================
    ATHLETICO PARANAENSE
-   ESTILO PRINCIPAL DO SITE
-   SOMENTE CSS - SEM JAVASCRIPT
-========================================= */
-
-/* CONFIGURAÇÕES GERAIS */
+   HTML + CSS | SEM JAVASCRIPT
+===================================== */
 
 :root {
     --vermelho: #d00027;
-    --vermelho-escuro: #94001b;
+    --vermelho-escuro: #90001b;
     --preto: #101010;
-    --preto-card: #191919;
-    --cinza: #242424;
+    --card: #191919;
+    --cinza: #292929;
     --branco: #ffffff;
-    --cinza-claro: #dddddd;
+    --texto: #dddddd;
 }
 
 * {
@@ -48,14 +45,12 @@ a {
 }
 
 p {
-    color: var(--cinza-claro);
+    color: var(--texto);
     margin-bottom: 16px;
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.2;
+h1, h2, h3 {
+    line-height: 1.25;
 }
 
 h2 {
@@ -69,8 +64,8 @@ h2::after {
     display: block;
     width: 65px;
     height: 4px;
-    background: var(--vermelho);
     margin-top: 12px;
+    background: var(--vermelho);
     border-radius: 5px;
 }
 
@@ -80,32 +75,30 @@ h3 {
 
 ::selection {
     background: var(--vermelho);
-    color: var(--branco);
+    color: white;
 }
 
 
-/* =========================================
-   CABEÇALHO
-========================================= */
+/* CABEÇALHO */
 
 .cabecalho {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(12, 12, 12, 0.97);
+    background: rgba(10, 10, 10, 0.97);
     border-bottom: 2px solid var(--vermelho);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
 .topo {
     width: min(1200px, 92%);
     min-height: 90px;
     margin: auto;
+    padding: 12px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
-    padding: 12px 0;
+    gap: 22px;
 }
 
 .logo {
@@ -126,14 +119,13 @@ h3 {
     width: 55px;
     height: 55px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 7px;
 }
 
 .menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -148,15 +140,13 @@ h3 {
 }
 
 .menu a:hover {
-    color: var(--branco);
     background: var(--vermelho);
+    color: white;
     transform: translateY(-2px);
 }
 
 
-/* =========================================
-   DESTAQUE PRINCIPAL
-========================================= */
+/* DESTAQUE PRINCIPAL */
 
 .hero {
     min-height: 570px;
@@ -226,13 +216,12 @@ h3 {
 .botao {
     display: inline-block;
     background: var(--vermelho);
-    color: var(--branco);
+    color: white;
     padding: 15px 24px;
     border: 2px solid var(--vermelho);
     border-radius: 5px;
     font-weight: 900;
     font-size: 13px;
-    letter-spacing: 0.5px;
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
                 background 0.3s ease;
@@ -245,9 +234,7 @@ h3 {
 }
 
 
-/* =========================================
-   SEÇÕES
-========================================= */
+/* SEÇÕES */
 
 .secao {
     padding: 85px max(5%, calc((100% - 1150px) / 2));
@@ -317,9 +304,7 @@ h3 {
 }
 
 
-/* =========================================
-   CARTÕES E GRADES
-========================================= */
+/* CARTÕES */
 
 .grade {
     display: grid;
@@ -331,8 +316,9 @@ h3 {
 .destaque-card,
 .curiosidade-card,
 .torcida-card {
-    background: var(--preto-card);
-    border: 1px solid #333333;
+    min-width: 0;
+    background: var(--card);
+    border: 1px solid #333;
     border-top: 4px solid var(--vermelho);
     padding: 25px;
     border-radius: 10px;
@@ -352,7 +338,7 @@ h3 {
 .destaque-card h3,
 .curiosidade-card h3,
 .torcida-card h3 {
-    color: var(--branco);
+    color: white;
     font-size: 19px;
 }
 
@@ -372,16 +358,14 @@ h3 {
 
 .destaque-card img {
     width: 100%;
-    max-height: 200px;
+    height: 210px;
     object-fit: cover;
     border-radius: 7px;
-    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 
-/* =========================================
-   LISTA DE JOGADORES CLICÁVEL
-========================================= */
+/* LISTA DE JOGADORES */
 
 .lista-jogadores {
     display: grid;
@@ -391,7 +375,7 @@ h3 {
 
 .jogador-grupo {
     background: #202020;
-    color: var(--branco);
+    color: white;
     border: 1px solid #3b3b3b;
     border-left: 5px solid var(--vermelho);
     border-radius: 9px;
@@ -443,7 +427,7 @@ h3 {
 
 .jogador-grupo li {
     padding: 10px 0;
-    color: var(--cinza-claro);
+    color: var(--texto);
     border-bottom: 1px solid #353535;
 }
 
@@ -458,9 +442,66 @@ h3 {
 }
 
 
-/* =========================================
-   TORCIDA
-========================================= */
+/* TABELAS DOS JOGADORES */
+
+.tabela-rolagem {
+    width: auto;
+    overflow-x: auto;
+    margin: 0 15px 18px;
+    border-radius: 8px;
+}
+
+.jogador-grupo table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: #191919;
+    color: white;
+}
+
+.jogador-grupo th,
+.jogador-grupo td {
+    padding: 13px 15px;
+    text-align: left;
+    border: 1px solid #3a3a3a;
+}
+
+.jogador-grupo th {
+    background: #c90027;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.jogador-grupo td {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.jogador-grupo tbody tr {
+    transition: background 0.25s ease;
+}
+
+.jogador-grupo tbody tr:nth-child(even) {
+    background: #252525;
+}
+
+.jogador-grupo tbody tr:hover {
+    background: #3a111a;
+}
+
+.jogador-grupo td:first-child {
+    color: #ff405f;
+    font-weight: bold;
+}
+
+.jogador-grupo td:nth-child(2) {
+    font-weight: bold;
+}
+
+
+/* TORCIDA */
 
 .torcida-card {
     margin: 25px 0;
@@ -473,50 +514,7 @@ h3 {
 }
 
 
-/* =========================================
-   TABELAS
-========================================= */
-
-.tabela-conteiner,
-.tabela-rolagem {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 25px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--preto-card);
-    color: var(--branco);
-}
-
-th,
-td {
-    padding: 15px;
-    text-align: left;
-    border: 1px solid #3a3a3a;
-}
-
-th {
-    background: var(--vermelho);
-    color: var(--branco);
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-tbody tr {
-    transition: background 0.25s ease;
-}
-
-tbody tr:hover {
-    background: #303030;
-}
-
-
-/* =========================================
-   RODAPÉ
-========================================= */
+/* RODAPÉ */
 
 .rodape {
     background: #080808;
@@ -556,13 +554,11 @@ tbody tr:hover {
 .credito {
     margin-top: 20px;
     font-size: 12px;
-    color: #888888;
+    color: #888;
 }
 
 
-/* =========================================
-   ANIMAÇÕES
-========================================= */
+/* ANIMAÇÃO INICIAL */
 
 @keyframes entrada {
     from {
@@ -577,9 +573,7 @@ tbody tr:hover {
 }
 
 
-/* =========================================
-   ACESSIBILIDADE
-========================================= */
+/* ACESSIBILIDADE */
 
 a:focus-visible,
 summary:focus-visible {
@@ -588,9 +582,7 @@ summary:focus-visible {
 }
 
 
-/* =========================================
-   RESPONSIVIDADE - TABLETS
-========================================= */
+/* TABLETS */
 
 @media (max-width: 900px) {
     .topo {
@@ -619,9 +611,7 @@ summary:focus-visible {
 }
 
 
-/* =========================================
-   RESPONSIVIDADE - CELULARES
-========================================= */
+/* CELULARES */
 
 @media (max-width: 600px) {
     .topo {
@@ -680,10 +670,10 @@ summary:focus-visible {
         font-size: 15px;
     }
 
-    th,
-    td {
+    .jogador-grupo th,
+    .jogador-grupo td {
         padding: 10px;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .imagem-conteudo,
@@ -693,9 +683,7 @@ summary:focus-visible {
 }
 
 
-/* =========================================
-   RESPEITAR REDUÇÃO DE MOVIMENTO
-========================================= */
+/* RESPEITAR REDUÇÃO DE MOVIMENTO */
 
 @media (prefers-reduced-motion: reduce) {
     html {
