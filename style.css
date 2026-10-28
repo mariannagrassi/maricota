@@ -1,33 +1,45 @@
 
-/* ========================================
+/* =========================================
    ATHLETICO PARANAENSE
-   Estilo do site - vermelho, preto e branco
-   ======================================== */
+   ESTILO PRINCIPAL DO SITE
+   SOMENTE CSS - SEM JAVASCRIPT
+========================================= */
 
 /* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --vermelho: #d00027;
+    --vermelho-escuro: #94001b;
+    --preto: #101010;
+    --preto-card: #191919;
+    --cinza: #242424;
+    --branco: #ffffff;
+    --cinza-claro: #dddddd;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-:root {
-    --vermelho: #d71920;
-    --vermelho-escuro: #940b12;
-    --preto: #101010;
-    --preto-claro: #1a1a1a;
-    --cinza: #252525;
-    --branco: #ffffff;
-    --cinza-claro: #d5d5d5;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
-    background-color: #f3f3f3;
-    color: #222222;
     font-family: Arial, Helvetica, sans-serif;
+    background: var(--preto);
+    color: var(--branco);
     line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -35,19 +47,54 @@ a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+p {
+    color: var(--cinza-claro);
+    margin-bottom: 16px;
 }
 
-/* CABEÇALHO */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--vermelho);
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-bottom: 12px;
+}
+
+::selection {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
 
 .cabecalho {
-    background-color: var(--preto);
-    border-bottom: 4px solid var(--vermelho);
-    position: relative;
-    width: 100%;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12, 12, 12, 0.97);
+    border-bottom: 2px solid var(--vermelho);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .topo {
@@ -58,36 +105,28 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-    flex-wrap: wrap;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: var(--branco);
+    font-size: 14px;
     font-weight: 900;
-    font-size: 19px;
     letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.04);
 }
 
 .logo img {
-    width: 52px;
-    height: 52px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
-}
-
-.logo span {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3;
-}
-
-.logo strong {
-    color: var(--vermelho);
-    font-size: 13px;
-    letter-spacing: 3px;
+    border-radius: 8px;
 }
 
 .menu {
@@ -95,373 +134,469 @@ img {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
 }
 
 .menu a {
-    color: var(--branco);
+    padding: 10px 12px;
+    border-radius: 6px;
     font-size: 13px;
     font-weight: bold;
-    padding: 9px 12px;
-    border-radius: 5px;
-    transition: 0.3s;
+    transition: color 0.3s ease,
+                background 0.3s ease,
+                transform 0.3s ease;
 }
 
 .menu a:hover {
-    background-color: var(--vermelho);
     color: var(--branco);
-}
-
-/* CAPA PRINCIPAL */
-
-.hero {
-    min-height: 440px;
-    padding: 70px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--branco);
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.82),
-            rgba(100, 0, 0, 0.78)
-        ),
-        var(--preto);
-    border-bottom: 5px solid var(--vermelho);
-}
-
-.hero-conteudo {
-    width: min(900px, 100%);
-}
-
-.hero h1 {
-    font-size: clamp(32px, 6vw, 65px);
-    line-height: 1.15;
-    margin: 12px 0 20px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.hero h2 {
-    color: var(--branco);
-    font-size: clamp(26px, 4vw, 42px);
-    margin: 12px 0;
-}
-
-.hero p {
-    font-size: 17px;
-    margin-bottom: 22px;
-}
-
-.etiqueta {
-    color: var(--vermelho);
-    font-weight: 900;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-/* BOTÕES */
-
-.botao {
-    display: inline-block;
-    background-color: var(--vermelho);
-    color: var(--branco);
-    padding: 13px 24px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    border: 2px solid var(--vermelho);
-    transition: 0.3s;
-}
-
-.botao:hover {
-    background-color: transparent;
-    color: var(--branco);
+    background: var(--vermelho);
     transform: translateY(-2px);
 }
 
-/* SEÇÕES */
+
+/* =========================================
+   DESTAQUE PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(208, 0, 39, 0.4),
+            transparent 35%
+        ),
+        linear-gradient(
+            115deg,
+            #080808 10%,
+            #1b1b1b 55%,
+            #650015 100%
+        );
+    border-bottom: 4px solid var(--vermelho);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 45px solid rgba(255, 255, 255, 0.035);
+    border-radius: 50%;
+    right: 8%;
+    top: 15%;
+    pointer-events: none;
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+    width: min(800px, 100%);
+    animation: entrada 0.8s ease both;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #ff405f;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background: var(--vermelho);
+    color: var(--branco);
+    padding: 15px 24px;
+    border: 2px solid var(--vermelho);
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-4px);
+    background: var(--vermelho-escuro);
+    box-shadow: 0 10px 25px rgba(208, 0, 39, 0.4);
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
 
 .secao {
-    padding: 70px max(5%, calc((100% - 1150px) / 2));
-    text-align: center;
-    background-color: #f3f3f3;
+    padding: 85px max(5%, calc((100% - 1150px) / 2));
+    scroll-margin-top: 90px;
 }
 
 .secao-escura {
-    background-color: var(--preto);
-    color: var(--cinza-claro);
+    background: #171717;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
 }
 
-.secao h2 {
-    color: var(--preto);
-    font-size: clamp(26px, 4vw, 38px);
-    line-height: 1.25;
-    margin: 10px 0 25px;
-    font-weight: 900;
-}
-
-.secao-escura h2 {
-    color: var(--branco);
-}
-
-.secao h3 {
-    font-size: 20px;
-    line-height: 1.35;
-    margin: 12px 0;
-    color: var(--vermelho);
-}
-
-.secao p {
-    max-width: 850px;
-    margin: 0 auto 20px;
-    font-size: 16px;
+.secao > p {
+    max-width: 950px;
 }
 
 .introducao {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    text-align: center;
 }
 
-/* IMAGENS */
+.introducao h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.imagem-principal {
-    width: min(800px, 100%);
-    max-height: 470px;
-    object-fit: cover;
+.introducao p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introducao .imagem-principal {
+    width: 180px;
     margin: 35px auto 0;
+    object-fit: contain;
+}
+
+.imagem-principal,
+.imagem-conteudo,
+.imagem-banner {
     border-radius: 12px;
-    border: 3px solid var(--vermelho);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s ease,
+                filter 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.imagem-principal:hover,
+.imagem-conteudo:hover,
+.imagem-banner:hover {
+    transform: scale(1.02);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 35px rgba(208, 0, 39, 0.18);
 }
 
 .imagem-conteudo {
     width: 100%;
-    max-height: 230px;
+    max-height: 460px;
     object-fit: cover;
-    margin: 20px auto 0;
-    border-radius: 8px;
+    margin: 30px 0;
 }
 
 .imagem-banner {
-    width: min(900px, 100%);
-    max-height: 420px;
+    width: 100%;
+    max-height: 520px;
     object-fit: cover;
-    margin: 35px auto 0;
-    border-radius: 10px;
-    border: 2px solid var(--vermelho);
+    margin: 30px 0;
 }
 
-/* CARTÕES E LINHA DO TEMPO */
+
+/* =========================================
+   CARTÕES E GRADES
+========================================= */
 
 .grade {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
-    margin: 35px auto;
-    text-align: left;
+    margin-top: 35px;
 }
 
-.titulo-card,
 .destaque-card,
 .curiosidade-card,
 .torcida-card {
-    background-color: var(--branco);
-    color: #292929;
-    border-radius: 10px;
-    padding: 25px;
+    background: var(--preto-card);
+    border: 1px solid #333333;
     border-top: 4px solid var(--vermelho);
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.09);
-    transition: transform 0.25s, box-shadow 0.25s;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
 }
 
-.titulo-card:hover,
 .destaque-card:hover,
-.curiosidade-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.curiosidade-card:hover,
+.torcida-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--vermelho);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.secao-escura .titulo-card,
-.secao-escura .destaque-card,
-.secao-escura .curiosidade-card,
-.secao-escura .torcida-card {
-    background-color: var(--preto-claro);
-    color: var(--cinza-claro);
+.destaque-card h3,
+.curiosidade-card h3,
+.torcida-card h3 {
+    color: var(--branco);
+    font-size: 19px;
+}
+
+.destaque-card p:last-child,
+.curiosidade-card p:last-child,
+.torcida-card p:last-child {
+    margin-bottom: 0;
 }
 
 .ano {
     display: inline-block;
-    color: var(--vermelho);
+    color: #ff405f;
+    font-size: 26px;
     font-weight: 900;
-    font-size: 22px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
-.titulo-card p,
-.destaque-card p,
-.curiosidade-card p {
-    font-size: 14px;
-    margin: 8px 0;
-}
-
-.titulo-card h3,
-.destaque-card h3,
-.curiosidade-card h3 {
-    color: var(--vermelho);
-}
-
-/* TABELAS */
-
-.tabela-conteiner {
+.destaque-card img {
     width: 100%;
-    margin: 35px auto;
-    text-align: left;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-top: 15px;
 }
 
+
+/* =========================================
+   LISTA DE JOGADORES CLICÁVEL
+========================================= */
+
+.lista-jogadores {
+    display: grid;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.jogador-grupo {
+    background: #202020;
+    color: var(--branco);
+    border: 1px solid #3b3b3b;
+    border-left: 5px solid var(--vermelho);
+    border-radius: 9px;
+    overflow: hidden;
+    transition: border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.jogador-grupo:hover {
+    border-color: var(--vermelho);
+    transform: translateX(4px);
+    box-shadow: 0 5px 18px rgba(208, 0, 39, 0.12);
+}
+
+.jogador-grupo summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.jogador-grupo summary:hover {
+    background: #2b2b2b;
+}
+
+.jogador-grupo summary::-webkit-details-marker {
+    display: none;
+}
+
+.jogador-grupo summary::after {
+    content: "+";
+    float: right;
+    color: #ff405f;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.jogador-grupo[open] summary::after {
+    content: "−";
+}
+
+.jogador-grupo ul {
+    padding: 0 25px 20px 45px;
+    margin: 0;
+}
+
+.jogador-grupo li {
+    padding: 10px 0;
+    color: var(--cinza-claro);
+    border-bottom: 1px solid #353535;
+}
+
+.jogador-grupo li:last-child {
+    border-bottom: none;
+}
+
+.aviso-elenco {
+    margin-top: 22px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   TORCIDA
+========================================= */
+
+.torcida-card {
+    margin: 25px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #1c1c1c, #36000d);
+}
+
+.torcida-card h3 {
+    font-size: 23px;
+}
+
+
+/* =========================================
+   TABELAS
+========================================= */
+
+.tabela-conteiner,
 .tabela-rolagem {
     width: 100%;
     overflow-x: auto;
-    border-radius: 9px;
-    border: 1px solid #444444;
+    margin-top: 25px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #1a1a1a;
-    color: var(--branco);
-}
-
-thead {
-    background-color: var(--vermelho);
+    background: var(--preto-card);
     color: var(--branco);
 }
 
 th,
 td {
-    padding: 16px;
+    padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #444444;
+    border: 1px solid #3a3a3a;
 }
 
 th {
-    font-size: 13px;
+    background: var(--vermelho);
+    color: var(--branco);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 13px;
 }
 
-td {
-    font-size: 14px;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #292929;
+tbody tr {
+    transition: background 0.25s ease;
 }
 
 tbody tr:hover {
-    background-color: #3a1719;
+    background: #303030;
 }
 
-/* TORCIDA */
 
-.torcida-card {
-    max-width: 850px;
-    margin: 35px auto;
-    text-align: center;
-}
-
-.torcida-card p {
-    margin-bottom: 20px;
-}
-
-.torcida-card .imagem-principal {
-    margin-top: 20px;
-}
-
-/* COLUNAS DE CURIOSIDADES */
-
-.colunas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    max-width: 950px;
-    margin: 30px auto;
-    text-align: left;
-}
-
-/* RODAPÉ */
+/* =========================================
+   RODAPÉ
+========================================= */
 
 .rodape {
-    background-color: var(--preto);
-    color: var(--cinza-claro);
+    background: #080808;
+    border-top: 4px solid var(--vermelho);
+    padding: 45px 5%;
     text-align: center;
-    padding: 35px 20px;
-    border-top: 5px solid var(--vermelho);
+}
+
+.rodape h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.rodape h2::after {
+    margin: 12px auto 0;
 }
 
 .rodape p {
-    margin: 8px 0;
-    font-size: 14px;
-}
-
-.rodape p:first-child {
-    color: var(--branco);
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .voltar-topo {
     display: inline-block;
-    color: var(--vermelho);
-    font-weight: bold;
-    margin-top: 15px;
+    margin: 15px 0;
+    padding: 10px 18px;
+    border: 1px solid var(--vermelho);
+    border-radius: 6px;
+    transition: background 0.3s ease,
+                transform 0.3s ease;
 }
 
 .voltar-topo:hover {
-    color: var(--branco);
+    background: var(--vermelho);
+    transform: translateY(-3px);
 }
 
-/* RESPONSIVIDADE PARA TABLETS */
+.credito {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888888;
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #ff7188;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
 
 @media (max-width: 900px) {
     .topo {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .menu {
-        width: 100%;
-    }
-
-    .grade {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero {
-        min-height: 360px;
-    }
-}
-
-/* RESPONSIVIDADE PARA CELULARES */
-
-@media (max-width: 600px) {
-    .topo {
-        width: 94%;
-    }
-
-    .logo {
-        font-size: 16px;
-    }
-
-    .logo img {
-        width: 42px;
-        height: 42px;
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 15px;
     }
 
     .menu {
@@ -469,46 +604,108 @@ tbody tr:hover {
     }
 
     .menu a {
-        padding: 8px;
         font-size: 12px;
+        padding: 9px;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero {
-        min-height: 340px;
-        padding: 55px 18px;
+        min-height: 480px;
+        padding: 65px 6%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+    .topo {
+        width: 94%;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
     }
 
     .hero p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .secao {
-        padding: 48px 5%;
+        padding: 55px 6%;
     }
 
-    .grade,
-    .colunas {
+    .grade {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 17px;
     }
 
-    .titulo-card,
     .destaque-card,
-    .curiosidade-card {
+    .curiosidade-card,
+    .torcida-card {
         padding: 20px;
     }
 
-    .imagem-principal {
-        max-height: 320px;
-    }
-
-    .imagem-banner {
-        max-height: 280px;
+    .jogador-grupo summary {
+        padding: 17px;
+        font-size: 15px;
     }
 
     th,
     td {
-        padding: 12px;
-        font-size: 12px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .imagem-conteudo,
+    .imagem-banner {
+        border-radius: 8px;
+    }
+}
+
+
+/* =========================================
+   RESPEITAR REDUÇÃO DE MOVIMENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
