@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a história, os títulos, a torcida e a Arena do Athletico Paranaense.">
-    <title>Athletico Paranaense | Furacão</title>
+    <meta name="description" content="Conheça a história, os títulos, a torcida e a paixão pelo Club Athletico Paranaense.">
+    <title>Athletico Paranaense | Paixão Rubro-Negra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="topo">
 
-    <header class="cabecalho" id="inicio">
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
         <div class="topo">
-            <a href="#inicio" class="logo">
+            <a href="#topo" class="logo">
                 <img src="escudo.jpg" alt="Escudo do Athletico Paranaense">
-                <span>ATHLETICO <strong>PARANAENSE</strong></span>
+                <span>ATHLETICO<br>PARANAENSE</span>
             </a>
 
             <nav class="menu">
+                <a href="#inicio">Início</a>
                 <a href="#historia">História</a>
                 <a href="#titulos">Títulos</a>
                 <a href="#arena">Arena</a>
@@ -30,304 +32,475 @@
 
     <main>
 
-        <section class="hero">
+        <!-- APRESENTAÇÃO -->
+        <section class="hero" id="inicio">
             <div class="hero-conteudo">
-                <p class="etiqueta">DESDE 1924</p>
-                <h1>ATHLETICO PARANAENSE</h1>
-                <p>Uma história de paixão, tradição e conquistas.</p>
-                <a class="botao" href="#historia">CONHEÇA O FURACÃO</a>
+                <span class="etiqueta">DESDE 1924</span>
+
+                <h1>PAIXÃO QUE<br>VEM DO FURACÃO</h1>
+
+                <p>
+                    Muito mais que um clube. Uma história de tradição,
+                    conquistas, superação e amor pelas cores vermelho e preto.
+                </p>
+
+                <a href="#historia" class="botao">CONHEÇA NOSSA HISTÓRIA</a>
             </div>
         </section>
 
+        <!-- INTRODUÇÃO -->
         <section class="secao introducao">
-            <p class="etiqueta">O CLUBE</p>
+            <span class="etiqueta">O CLUBE</span>
+
             <h2>Um gigante do futebol brasileiro</h2>
 
             <p>
-                O Club Athletico Paranaense é um clube de futebol de Curitiba,
-                no Paraná. Conhecido como Furacão, construiu uma trajetória
-                marcante no futebol estadual, nacional e internacional.
+                O Club Athletico Paranaense é um dos clubes mais conhecidos
+                do futebol brasileiro. Fundado em Curitiba, no Paraná,
+                construiu sua identidade com títulos importantes, uma
+                torcida apaixonada e uma trajetória marcada por inovação.
             </p>
 
-            <img class="imagem-principal"
-                 src="escudo.jpg"
-                 alt="Escudo do Athletico Paranaense">
+            <p>
+                Conhecido como Furacão, o clube representa a força,
+                a determinação e o orgulho de milhares de torcedores.
+                Suas cores tradicionais são o vermelho e o preto.
+            </p>
+
+            <img
+                src="escudo.jpg"
+                alt="Escudo do Athletico Paranaense"
+                class="imagem-principal"
+            >
         </section>
 
+        <!-- HISTÓRIA -->
         <section class="secao secao-escura" id="historia">
-            <p class="etiqueta">NOSSA TRAJETÓRIA</p>
+            <span class="etiqueta">NOSSA TRAJETÓRIA</span>
+
             <h2>A história do Furacão</h2>
 
             <p>
                 O Athletico Paranaense foi fundado em 26 de março de 1924,
-                a partir da união do Internacional Futebol Clube com o
-                América Futebol Clube, ambos de Curitiba.
+                em Curitiba, a partir da união dos clubes Internacional
+                Futebol Clube e América Futebol Clube.
             </p>
 
+            <p>
+                Ao longo de sua história, o clube conquistou espaço no
+                cenário nacional e internacional, desenvolveu sua estrutura
+                esportiva e passou a ser reconhecido por sua modernização.
+            </p>
+
+            <p>
+                Em 2001, conquistou seu primeiro Campeonato Brasileiro
+                da Série A. A conquista marcou uma das épocas mais
+                importantes de sua trajetória.
+            </p>
+
+            <p>
+                Em 2005, chegou à final da Copa Libertadores da América,
+                alcançando um feito histórico para o futebol paranaense.
+            </p>
+
+            <p>
+                Em 2018, venceu a Copa Sul-Americana pela primeira vez.
+                Em 2019, conquistou a Copa do Brasil. Em 2021, voltou
+                a vencer a Copa Sul-Americana, ampliando sua presença
+                entre os grandes clubes do continente.
+            </p>
+
+            <img
+                src="campeao2001.jpg"
+                alt="Registro da conquista do Campeonato Brasileiro de 2001"
+                class="imagem-conteudo"
+                loading="lazy"
+            >
+
+            <h3>Momentos marcantes</h3>
+
             <div class="grade">
-                <article class="titulo-card">
+
+                <article class="destaque-card">
                     <span class="ano">1924</span>
-                    <h3>A fundação</h3>
-                    <p>O nascimento de um clube que se tornaria uma referência do Paraná.</p>
+                    <h3>Fundação</h3>
+                    <p>
+                        Nasce o clube que se tornaria um dos símbolos
+                        do futebol paranaense.
+                    </p>
                 </article>
 
-                <article class="titulo-card">
-                    <span class="ano">1949</span>
-                    <h3>O Furacão</h3>
-                    <p>O clube ganhou o apelido de Furacão após uma campanha marcante.</p>
-                </article>
-
-                <article class="titulo-card">
-                    <span class="ano">1995</span>
-                    <h3>Uma nova fase</h3>
-                    <p>O clube iniciou uma importante transformação administrativa e esportiva.</p>
-                </article>
-
-                <article class="titulo-card">
+                <article class="destaque-card">
                     <span class="ano">2001</span>
                     <h3>Campeão brasileiro</h3>
-                    <p>O Athletico conquistou seu primeiro Campeonato Brasileiro da Série A.</p>
+                    <p>
+                        O Furacão conquista o Campeonato Brasileiro
+                        da Série A.
+                    </p>
                 </article>
 
-                <article class="titulo-card">
+                <article class="destaque-card">
                     <span class="ano">2018</span>
-                    <h3>Conquista continental</h3>
-                    <p>O Furacão venceu a Copa Sul-Americana pela primeira vez.</p>
+                    <h3>Primeira Sul-Americana</h3>
+                    <p>
+                        O clube conquista seu primeiro título da
+                        Copa Sul-Americana.
+                    </p>
                 </article>
 
-                <article class="titulo-card">
+                <article class="destaque-card">
                     <span class="ano">2019</span>
                     <h3>Copa do Brasil</h3>
-                    <p>O clube conquistou um dos principais torneios do futebol nacional.</p>
+                    <p>
+                        O Athletico conquista um dos títulos mais
+                        importantes de sua história.
+                    </p>
                 </article>
-            </div>
 
-            <img class="imagem-banner"
-                 src="campeao2001.jpg"
-                 alt="Athletico Paranaense campeão brasileiro de 2001">
+                <article class="destaque-card">
+                    <span class="ano">2021</span>
+                    <h3>Bicampeão continental</h3>
+                    <p>
+                        O clube conquista sua segunda Copa Sul-Americana.
+                    </p>
+                </article>
+
+            </div>
         </section>
 
+        <!-- TÍTULOS -->
         <section class="secao" id="titulos">
-            <p class="etiqueta">ORGULHO RUBRO-NEGRO</p>
-            <h2>Grandes conquistas</h2>
+            <span class="etiqueta">SALA DE TROFÉUS</span>
+
+            <h2>Conquistas do Furacão</h2>
 
             <p>
-                O Athletico construiu uma história de conquistas estaduais,
-                nacionais e internacionais, tornando-se um clube importante
-                no cenário do futebol brasileiro.
+                A trajetória do Athletico é marcada por títulos estaduais,
+                nacionais e internacionais que ajudaram a construir
+                a identidade do clube.
             </p>
 
             <div class="grade">
+
                 <article class="destaque-card">
-                    <h3>Campeonato Brasileiro</h3>
-                    <p class="ano">2001</p>
-                    <p>Primeiro título brasileiro da Série A.</p>
-                    <img class="imagem-conteudo"
-                         src="campeao2001.jpg"
-                         alt="Conquista do Campeonato Brasileiro de 2001">
+                    <h3>🏆 Campeonato Brasileiro</h3>
+                    <p>
+                        <strong>2001</strong>
+                    </p>
+                    <p>
+                        Uma conquista histórica que colocou o clube
+                        no topo do futebol brasileiro.
+                    </p>
                 </article>
 
                 <article class="destaque-card">
-                    <h3>Copa Sul-Americana</h3>
-                    <p class="ano">2018 e 2021</p>
-                    <p>Duas conquistas continentais importantes.</p>
+                    <h3>🏆 Copa do Brasil</h3>
+                    <p>
+                        <strong>2019</strong>
+                    </p>
+                    <p>
+                        O Furacão venceu a competição nacional
+                        e conquistou um título inédito.
+                    </p>
+                    <img
+                        src="copadobrasil.jpg"
+                        alt="Imagem relacionada à Copa do Brasil"
+                        class="imagem-conteudo"
+                        loading="lazy"
+                    >
                 </article>
 
                 <article class="destaque-card">
-                    <h3>Copa do Brasil</h3>
-                    <p class="ano">2019</p>
-                    <p>Uma campanha histórica na competição nacional.</p>
-                    <img class="imagem-conteudo"
-                         src="copadobrasil.jpg"
-                         alt="Athletico Paranaense campeão da Copa do Brasil">
+                    <h3>🏆 Copa Sul-Americana</h3>
+                    <p>
+                        <strong>2018 e 2021</strong>
+                    </p>
+                    <p>
+                        Duas conquistas internacionais que marcaram
+                        a história rubro-negra.
+                    </p>
                 </article>
 
                 <article class="destaque-card">
-                    <h3>Campeonato Paranaense</h3>
-                    <p class="ano">Diversas conquistas</p>
-                    <p>Uma trajetória vitoriosa no futebol do Paraná.</p>
+                    <h3>🏆 Campeonato Paranaense</h3>
+                    <p>
+                        O clube possui diversas conquistas estaduais
+                        ao longo de sua trajetória.
+                    </p>
                 </article>
+
             </div>
         </section>
 
-        <section class="secao secao-escura">
-            <p class="etiqueta">NO CONTINENTE</p>
-            <h2>O Athletico na Libertadores</h2>
+        <!-- LIBERTADORES -->
+        <section class="secao secao-escura" id="libertadores">
+            <span class="etiqueta">CENÁRIO INTERNACIONAL</span>
+
+            <h2>O Furacão na Libertadores</h2>
 
             <p>
-                Em 2005, o Furacão chegou à final da Copa Libertadores
-                pela primeira vez. Em 2022, voltou à decisão da competição,
-                mostrando sua força no futebol sul-americano.
+                A Copa Libertadores da América é uma das competições
+                mais importantes do futebol sul-americano. O Athletico
+                chegou à final em 2005 e novamente em 2022, demonstrando
+                sua capacidade de competir em alto nível continental.
             </p>
 
-            <img class="imagem-banner"
-                 src="copadobrasil.jpg"
-                 alt="Imagem de uma conquista do Athletico">
+            <p>
+                Em 2022, o clube alcançou mais uma final, reforçando
+                sua presença entre as equipes de destaque da América do Sul.
+            </p>
         </section>
 
+        <!-- ARENA -->
         <section class="secao" id="arena">
-            <p class="etiqueta">NOSSA CASA</p>
-            <h2>Arena da Baixada</h2>
+            <span class="etiqueta">NOSSA CASA</span>
+
+            <h2>Ligga Arena</h2>
 
             <p>
-                Localizada em Curitiba, a Arena da Baixada é a casa do
-                Athletico Paranaense. Conhecida por sua estrutura moderna,
-                recebe partidas de futebol e grandes eventos.
+                Localizada em Curitiba, a Ligga Arena é a casa do
+                Athletico Paranaense. O estádio é conhecido por sua
+                estrutura moderna e pela proximidade entre o campo
+                e as arquibancadas.
             </p>
 
-            <img class="imagem-principal"
-                 src="arena.jpg"
-                 alt="Arena da Baixada em Curitiba">
+            <p>
+                A antiga Arena da Baixada passou por grandes melhorias
+                e se tornou uma referência em infraestrutura esportiva
+                no Brasil. O estádio também recebeu partidas da Copa
+                do Mundo de 2014.
+            </p>
+
+            <img
+                src="arena.jpg"
+                alt="Estádio do Athletico Paranaense"
+                class="imagem-banner"
+                loading="lazy"
+            >
+
+            <h3>Uma casa de grandes jogos</h3>
+
+            <p>
+                Em dias de partida, a Arena se transforma em um ambiente
+                de festa, pressão sobre os adversários e apoio intenso
+                da torcida rubro-negra.
+            </p>
         </section>
 
+        <!-- JOGADORES -->
         <section class="secao secao-escura" id="jogadores">
-            <p class="etiqueta">DENTRO DE CAMPO</p>
+            <span class="etiqueta">ELENCO RUBRO-NEGRO</span>
+
             <h2>Jogadores do Furacão</h2>
 
             <p>
-                Os jogadores são fundamentais para a trajetória do clube.
-                Cada geração representa o Athletico em busca de novas
-                vitórias e conquistas.
+                O futebol é construído pelo trabalho coletivo.
+                Goleiros, defensores, meio-campistas e atacantes
+                possuem funções diferentes e importantes para a equipe.
             </p>
 
-            <div class="tabela-conteiner">
-                <div class="tabela-rolagem">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Informação</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Posições</td>
-                                <td>Goleiros, defensores, meio-campistas e atacantes</td>
-                            </tr>
-                            <tr>
-                                <td>Objetivo</td>
-                                <td>Representar o clube nas competições</td>
-                            </tr>
-                            <tr>
-                                <td>Formação</td>
-                                <td>Desenvolvimento de atletas e trabalho em equipe</td>
-                            </tr>
-                            <tr>
-                                <td>Identidade</td>
-                                <td>Camisa rubro-negra e tradição do Furacão</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <p>
+                Clique em uma posição para abrir ou fechar a lista.
+            </p>
+
+            <div class="lista-jogadores">
+
+                <details class="jogador-grupo">
+                    <summary>🧤 Goleiros</summary>
+                    <ul>
+                        <li>Mycael</li>
+                        <li>Santos</li>
+                        <li>Matheus Soares</li>
+                    </ul>
+                </details>
+
+                <details class="jogador-grupo">
+                    <summary>🛡️ Defensores</summary>
+                    <ul>
+                        <li>Juan Felipe Aguirre</li>
+                        <li>Carlos Terán</li>
+                        <li>Léo</li>
+                        <li>Arthur Dias</li>
+                    </ul>
+                </details>
+
+                <details class="jogador-grupo">
+                    <summary>⚙️ Meio-campistas</summary>
+                    <ul>
+                        <li>Consulte o elenco oficial para inserir os nomes atuais.</li>
+                    </ul>
+                </details>
+
+                <details class="jogador-grupo">
+                    <summary>⚽ Atacantes</summary>
+                    <ul>
+                        <li>Consulte o elenco oficial para inserir os nomes atuais.</li>
+                    </ul>
+                </details>
+
             </div>
 
-            <img class="imagem-banner"
-                 src="arquibancada.jpg"
-                 alt="Torcida acompanhando o Athletico">
-        </section>
-
-        <section class="secao" id="gestao">
-            <p class="etiqueta">BASTIDORES</p>
-            <h2>Gestão e transformação</h2>
-
-            <p>
-                A modernização da estrutura do clube e o planejamento
-                administrativo tiveram papel importante na trajetória
-                recente do Athletico Paranaense.
+            <p class="aviso-elenco">
+                Atenção: os nomes precisam ser conferidos e atualizados
+                conforme o elenco oficial da temporada.
             </p>
         </section>
 
-        <section class="secao secao-escura" id="torcida">
-            <p class="etiqueta">PAIXÃO RUBRO-NEGRA</p>
-            <h2>A torcida do Athletico</h2>
+        <!-- TORCIDA -->
+        <section class="secao" id="torcida">
+            <span class="etiqueta">PAIXÃO RUBRO-NEGRA</span>
+
+            <h2>A força da torcida</h2>
 
             <p>
-                A torcida é uma parte essencial da identidade do Furacão.
-                Com cantos, bandeiras e apoio nas arquibancadas, os torcedores
-                acompanham o time nos momentos de alegria e dificuldade.
+                A torcida é uma parte fundamental da identidade do
+                Athletico Paranaense. O apoio vindo das arquibancadas
+                acompanha o clube nos momentos de alegria e também
+                nos desafios.
             </p>
 
-            <article class="torcida-card">
-                <h3>Os Fanáticos</h3>
+            <p>
+                Os cantos, as bandeiras e as cores vermelho e preto
+                transformam os dias de jogo em momentos especiais
+                para milhares de atleticanos.
+            </p>
+
+            <img
+                src="torcida.jpg"
+                alt="Torcida do Athletico Paranaense"
+                class="imagem-conteudo"
+                loading="lazy"
+            >
+
+            <div class="torcida-card">
+                <h3>Uma paixão que atravessa gerações</h3>
                 <p>
-                    A Torcida Organizada Os Fanáticos, conhecida como TOF,
-                    é uma das torcidas organizadas tradicionais ligadas ao clube.
+                    Ser atleticano é carregar as cores do Furacão,
+                    apoiar o clube e celebrar sua história.
                 </p>
+            </div>
 
-                <img class="imagem-principal"
-                     src="torcida.jpg"
-                     alt="Torcida Os Fanáticos do Athletico Paranaense">
-            </article>
-
-            <h3>Arquibancadas</h3>
-            <p>
-                A atmosfera dos jogos é marcada pelos cantos, pelas bandeiras
-                e pela participação dos torcedores.
-            </p>
-
-            <img class="imagem-banner"
-                 src="arquibancada.jpg"
-                 alt="Arquibancada de torcedores rubro-negros">
+            <img
+                src="arquibancada.jpg"
+                alt="Arquibancada rubro-negra"
+                class="imagem-banner"
+                loading="lazy"
+            >
         </section>
 
-        <section class="secao" id="rivalidades">
-            <p class="etiqueta">CLÁSSICOS</p>
-            <h2>Rivalidades do Furacão</h2>
+        <!-- RIVALIDADES -->
+        <section class="secao secao-escura" id="rivalidades">
+            <span class="etiqueta">FUTEBOL PARANAENSE</span>
+
+            <h2>Clássicos e rivalidades</h2>
 
             <p>
-                O principal clássico do Athletico é contra o Coritiba.
-                Conhecido como Atletiba, o confronto é uma das partidas
-                mais tradicionais do futebol paranaense.
+                O futebol paranaense possui rivalidades tradicionais
+                que movimentam a cidade de Curitiba e todo o estado.
             </p>
-
-            <p>
-                O clube também disputa partidas importantes contra equipes
-                de outras regiões do Brasil e da América do Sul.
-            </p>
-        </section>
-
-        <section class="secao secao-escura" id="curiosidades">
-            <p class="etiqueta">VOCÊ SABIA?</p>
-            <h2>Curiosidades sobre o Athletico</h2>
 
             <div class="grade">
-                <article class="curiosidade-card">
-                    <h3>Fundação</h3>
-                    <p>O clube foi fundado em 26 de março de 1924.</p>
+
+                <article class="destaque-card">
+                    <h3>Atletiba</h3>
+                    <p>
+                        O clássico entre Athletico Paranaense e
+                        Coritiba é um dos confrontos mais tradicionais
+                        do futebol do Paraná.
+                    </p>
                 </article>
 
-                <article class="curiosidade-card">
-                    <h3>Apelido</h3>
-                    <p>O time é conhecido como Furacão.</p>
+                <article class="destaque-card">
+                    <h3>Clássico contra o Paraná Clube</h3>
+                    <p>
+                        Os encontros entre Athletico e Paraná Clube
+                        também fazem parte da história do futebol
+                        da capital paranaense.
+                    </p>
                 </article>
 
-                <article class="curiosidade-card">
-                    <h3>Estádio</h3>
-                    <p>A Arena da Baixada fica em Curitiba, no Paraná.</p>
-                </article>
-
-                <article class="curiosidade-card">
-                    <h3>Cores</h3>
-                    <p>O vermelho e o preto identificam o clube.</p>
-                </article>
             </div>
         </section>
 
-        <section class="hero">
-            <div class="hero-conteudo">
-                <p class="etiqueta">UMA PAIXÃO SEM IGUAL</p>
-                <h2>Ser Athletico é fazer parte de uma história.</h2>
-                <p>Uma camisa, duas cores e uma paixão que atravessa gerações.</p>
-                <a class="botao" href="#inicio">VOLTAR AO TOPO</a>
+        <!-- CURIOSIDADES -->
+        <section class="secao" id="curiosidades">
+            <span class="etiqueta">VOCÊ SABIA?</span>
+
+            <h2>Curiosidades sobre o Furacão</h2>
+
+            <div class="grade">
+
+                <article class="curiosidade-card">
+                    <h3>🌪️ O apelido</h3>
+                    <p>
+                        O clube é conhecido como Furacão, apelido
+                        associado à força de suas equipes.
+                    </p>
+                </article>
+
+                <article class="curiosidade-card">
+                    <h3>📍 Curitiba</h3>
+                    <p>
+                        O Athletico foi fundado na capital do Paraná
+                        e representa uma parte importante da cultura
+                        esportiva da cidade.
+                    </p>
+                </article>
+
+                <article class="curiosidade-card">
+                    <h3>🏟️ Modernização</h3>
+                    <p>
+                        A Arena da Baixada foi um dos estádios
+                        brasileiros pioneiros em soluções modernas
+                        de infraestrutura.
+                    </p>
+                </article>
+
+                <article class="curiosidade-card">
+                    <h3>🔴⚫ Cores tradicionais</h3>
+                    <p>
+                        O vermelho e o preto são símbolos da
+                        identidade rubro-negra.
+                    </p>
+                </article>
+
             </div>
+        </section>
+
+        <!-- FUNDAMENTO -->
+        <section class="secao secao-escura" id="fundamento">
+            <span class="etiqueta">NOSSA IDENTIDADE</span>
+
+            <h2>Tradição, trabalho e superação</h2>
+
+            <p>
+                O Athletico busca construir sua trajetória por meio
+                do desenvolvimento esportivo, da formação de atletas,
+                do trabalho coletivo e da busca por resultados.
+            </p>
+
+            <p>
+                Sua história reúne conquistas, desafios e momentos
+                marcantes que continuam inspirando novas gerações
+                de torcedores.
+            </p>
         </section>
 
     </main>
 
+    <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>ATHLETICO PARANAENSE</p>
-        <p>Site informativo desenvolvido para fins educacionais.</p>
-        <a class="voltar-topo" href="#inicio">Voltar ao início ↑</a>
+        <h2>ATHLETICO PARANAENSE</h2>
+
+        <p>Paixão rubro-negra desde 1924.</p>
+
+        <p>Feito por um torcedor do Furacão ❤️🖤</p>
+
+        <a href="#topo" class="voltar-topo">Voltar ao início ↑</a>
+
+        <p class="credito">
+            Site informativo independente, desenvolvido com HTML e CSS.
+        </p>
     </footer>
 
 </body>
